@@ -1,0 +1,12 @@
+---
+layout: post
+title: Отключения микрофона
+date: '2014-10-20T02:42:00.004+04:00'
+author: Дмитрий К
+tags: 
+modified_time: '2014-10-20T02:42:25.908+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-3274370414487723320
+blogger_orig_url: http://ubufang.blogspot.com/2014/10/blog-post.html
+---
+
+Начиная с ядра 3.13 поддерживается кнопка отключения микрофона, которая присутствует на некоторых ноутбуках, например Thinkpad. Но, в KDE-4 механизм обработки события MICMUTE отсутствует, потому необходимо установить действие на нажатие вручную. Ниже приведены необходимые действия для ноутбуков thinkpad  Вначале необходимо отредактировать файл /lib/udev/hwdb.d/60-keyboard.hwdb, заменить <code>########################################################### # Lenovo ###########################################################  # thinkpad_acpi driver keyboard:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*   KEYBOARD_KEY_1a=f20  # <code>&nbsp;</code></code><br /><br /><code><code>на</code></code><br /><br /><code><code>&nbsp;<code>########################################################### # Lenovo ###########################################################  # thinkpad_acpi driver keyboard:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*   KEYBOARD_KEY_1a=prog2  # </code>После этого выполнить<br /><code>sudo udevadm hwdb --update </code><br />и сделать ре-логин с систему.&<br />Осталось добавить действие (KDE-&gt;Параметры системы-&gt;Специальные действия) <code>amixer set Capture toggle </code>на нажатие кнопки

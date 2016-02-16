@@ -1,0 +1,12 @@
+---
+layout: post
+title: Настройка вида апплета часов в Gnome
+date: '2010-07-23T08:51:00.008+04:00'
+author: Дмитрий К
+tags: 
+modified_time: '2010-07-23T09:06:08.489+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-5024946357645310273
+blogger_orig_url: http://ubufang.blogspot.com/2010/07/gnome.html
+---
+
+В этом посте я расскажу как немного изменить вид(шрифт) часов в DE по имени GNOME!<br />Делается это очень просто:<br />Запускаем терминал и пишем<br /><blockquote><br />gconf-editor /apps/panel/applets/clock_screen0/prefs/<br /></blockquote><br /><span style="font-style:italic;">Прим.:Если Вы когда-либо удаляли часы, то следует <span style="font-weight:bold;">clock_screen0</span> заменить на <span style="font-weight:bold;">applet_0</span> </span><br /><br />Далее в строчке <span style="font-style:italic;">format</span> пишем <span style="font-style:italic;">custom</span> и там где <span style="font-style:italic;">custom format</span> добавляем строчку вида<br /><blockquote>&lt span font_desc="14"&gt%H:%M:%S &lt/span&gt</blockquote><br />Подробнее о custom format можно прочитать тут <a href="http://library.gnome.org/devel/pango/unstable/PangoMarkupFormat.html">http://library.gnome.org/devel/pango/unstable/PangoMarkupFormat.html</a>

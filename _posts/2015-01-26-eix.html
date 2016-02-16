@@ -1,0 +1,13 @@
+---
+layout: post
+title: Ускорение eix
+date: '2015-01-26T03:38:00.000+03:00'
+author: Дмитрий К
+tags:
+- gentoo
+modified_time: '2015-01-26T03:38:09.469+03:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-7279764151256517292
+blogger_orig_url: http://ubufang.blogspot.com/2015/01/eix.html
+---
+
+При обновлении базы, eix иногда долго синхронизируется с оверлеями (напр.: kde-overlay). Для ускорения нужно добавить в /etc/eixrc<br /><blockquote class="tr_bq"><span class="postbody">OVERLAY_CACHE_METHOD=parse </span></blockquote>

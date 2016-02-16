@@ -1,0 +1,12 @@
+---
+layout: post
+title: Установка Openoffice 3.2.1 в Ubuntu 10.04 Lucid
+date: '2010-08-25T23:30:00.003+04:00'
+author: Дмитрий К
+tags: 
+modified_time: '2010-08-25T23:38:46.599+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-8287461223405805822
+blogger_orig_url: http://ubufang.blogspot.com/2010/08/openoffice-321-ubuntu-1004-lucid.html
+---
+
+В начале месяца увидела свет новая версия такого офисного приложения как Openoffice под номером 3.2.1. Этот пакет войдет в следующую версию убунту по-умолчанию, а пока, мы можем подключить репозиторий<br /><blockquote><br />sudo add-apt-repository ppa:openoffice-pkgs/ppa<br /></blockquote><br />и обновиться<br /><blockquote><br />sudo aptitude update && sudo aptitude upgrade<br /></blockquote><br />Но, в репозитории нет русского языкового пакета. Итак, продолжаем установку и идем по следующему адресу <a href="https://launchpad.net/ubuntu/+source/openoffice.org-l10n/1:3.2.1-6ubuntu1/+build/1932236">https://launchpad.net/ubuntu/+source/openoffice.org-l10n/1:3.2.1-6ubuntu1/+build/1932236</a><br /><br />В списке <span style="font-weight:bold;">Binary packages</span> находим <span style="font-style:italic;">openoffice.org-l10n-common</span> и качаем версию с пометкой "_all" (openoffice.org-l10n-common_3.2.1-6ubuntu1_all.deb), то же самое делаем для openoffice.org-l10n-ru и openoffice.org-help-ru.Все!:)

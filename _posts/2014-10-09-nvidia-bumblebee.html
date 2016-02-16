@@ -1,0 +1,15 @@
+---
+layout: post
+title: Новый драйвер Nvidia и bumblebee
+date: '2014-10-09T21:46:00.003+04:00'
+author: Дмитрий К
+tags:
+- bumblebee
+- nvidia
+- gentoo
+modified_time: '2014-10-09T21:47:14.706+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-7037228374036085874
+blogger_orig_url: http://ubufang.blogspot.com/2014/10/nvidia-bumblebee.html
+---
+
+После 331й версии проприоритарного драйвера, bumblebee мог некорректно загружать/выгружать модуль nvidia.ko, что приводит к фризам системы и соответсвующим многочисленным логам в dmesg.<br />Для решения данной проблемы следует добавить такие строчки в файл <u>/etc/modprobe.d/blacklist.conf</u><br /><code>blacklist nvidia<br />blacklist nouveau</code><br />и обновиться до последнего доступного драйвера

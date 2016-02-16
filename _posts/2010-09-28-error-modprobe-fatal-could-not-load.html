@@ -1,0 +1,14 @@
+---
+layout: post
+title: Error Modprobe FATAL Could not load modules.dep no such file or module
+date: '2010-09-28T00:42:00.003+04:00'
+author: Дмитрий К
+tags:
+- ubuntu
+- bug
+modified_time: '2010-09-28T00:47:32.612+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-175736939246372558
+blogger_orig_url: http://ubufang.blogspot.com/2010/09/error-modprobe-fatal-could-not-load.html
+---
+
+После некоторых обновлений Lucid и врожденно у Maverick, при запуске, Ubuntu выдает сообщение:<br /><blockquote><br />Error Modprobe FATAL Could not load modules.dep no such file or module<br /></blockquote><br />Хотя modules.dep находится в том самом месте где его ищет система. Дабы избавиться от всеужасающей надписи FATAL до fix, предлагается выполнить:<br /><blockquote>sudo update-initramfs -c -k x </blockquote><br />где x - вывод команды <span style="font-style:italic;">uname -r</span>;<br />затем:<br /><blockquote>sudo depmod -a</blockquote>

@@ -1,0 +1,18 @@
+---
+layout: post
+title: Y570 и bbswitch c ядром >=3.7
+date: '2013-02-01T15:05:00.000+04:00'
+author: Дмитрий К
+tags:
+- bumblebee
+- nvidia
+- optimus
+- bbswitch
+- acpi-handle-hack
+- lenovo y570
+modified_time: '2013-02-01T15:06:12.719+04:00'
+blogger_id: tag:blogger.com,1999:blog-3722882267608887154.post-7516378795511627062
+blogger_orig_url: http://ubufang.blogspot.com/2013/02/y570-bbswitch-c-37.html
+---
+
+Примерно, месяц назад, когда вышло linux-kernel версии <b>3.7</b>, было замечено, что acpi-handle-hack &nbsp;который позволял работать bbswitch и bumblebee в целом, более не работает.<br />Как выяснилось, патч дублирующий работу этого драйвера был принят разработчиками ядра и совсем скоро будет добавлен в основную ветку, предположительно версии<b> 3.8</b>(<a href="https://bugzilla.kernel.org/show_bug.cgi?id=42696">https://bugzilla.kernel.org/show_bug.cgi?id=42696</a>). Пока же, предлагается патчить ядро в-ручную:&nbsp;<a href="https://bugzilla.kernel.org/attachment.cgi?id=86101">https://bugzilla.kernel.org/attachment.cgi?id=86101</a><br /><br />

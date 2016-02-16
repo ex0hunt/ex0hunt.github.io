@@ -1,0 +1,36 @@
+---
+layout: post
+title: Thinkpad MicMute в KDE
+date: '2016-01-01T01:01:00.000+03:00'
+author: Дмитрий К
+tags:
+- kde
+- thinkpad
+modified_time: '2016-01-01T01:01:06.604+03:00'
+---
+
+<p>Вначале может потребоваться изменить определение клавиши в hwdb т.к. qt почему-то не понимают стандартную. В /lib/udev/hwdb.d/60-keyboard.hwdb ищем </p>
+
+<pre><code>KEYBOARD_KEY_1a=f20
+</code></pre>
+
+<p>меняем на</p>
+
+<pre><code>KEYBOARD_KEY_1a=prog2
+</code></pre>
+
+<p>Обновляем базу</p>
+
+<pre><code>sudo udevadm hwdb --update
+</code></pre>
+
+<p>так же необходимо перезапустить acpid.</p>
+
+<p><strong>Создание шортката</strong></p>
+
+<p>В <em>параметрах системы->Комбинации клавиш->cпециальные действия</em> добавляем шорткат который должен вызвать следующую команду</p>
+
+<pre><code>amixer set Capture toggle
+</code></pre>
+
+<p>После этого должен работать led и микшер захвата звука будет показывать Mute/Unmute состояния.</p>
