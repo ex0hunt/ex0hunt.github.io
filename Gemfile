@@ -5,5 +5,7 @@ gem 'jekyll-paginate'
 gem 'kramdown'
 gem 'jekyll-watch'
 gem 'jekyll-archives'
-gem 'jekyll'
+gem 'jekyll', ">= 3.6.3"
 gem 'json'
+gem "ffi", ">= 1.9.24"
+
