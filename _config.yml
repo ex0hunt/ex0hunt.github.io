@@ -16,7 +16,8 @@ twitter_username: akatdim
 github_username:  ex0hunt
 
 # Gems
-plugins: 
+plugins:
+- jekyll-sitemap 
 - jekyll-archives
 - jekyll-paginate
 
